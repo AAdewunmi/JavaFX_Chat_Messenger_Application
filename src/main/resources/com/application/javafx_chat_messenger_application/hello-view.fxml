@@ -5,6 +5,8 @@
 <?import javafx.scene.layout.VBox?>
 
 <?import javafx.scene.control.Button?>
+
+<!--
 <VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
       fx:controller="com.application.javafx_chat_messenger_application.HelloController">
     <padding>
@@ -14,3 +16,11 @@
     <Label fx:id="welcomeText"/>
     <Button text="Hello!" onAction="#onHelloButtonClick"/>
 </VBox>
+-->
+<?import javafx.scene.layout.AnchorPane?>
+<AnchorPane fx:id="ap_main"
+            fx:controller="com.application.javafx_chat_messenger_application.HelloController"
+            prefHeight="396" prefWidth="478"
+            xmlns:fx="http://maven.apache.org/POM/4.0.0">
+
+</AnchorPane>
