@@ -21,6 +21,9 @@
 <AnchorPane fx:id="ap_main"
             fx:controller="com.application.javafx_chat_messenger_application.HelloController"
             prefHeight="396" prefWidth="478"
-            xmlns:fx="http://maven.apache.org/POM/4.0.0">
+            xmlns:fx="http://javafx.com/fxml">
+            <children>
+                <Button fx:id="button_send" layoutX="404" layoutY="228" text="Send"/>
 
+            </children>
 </AnchorPane>
