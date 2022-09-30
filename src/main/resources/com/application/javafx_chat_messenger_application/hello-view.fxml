@@ -25,4 +25,5 @@
                     </content>
                 </ScrollPane>
             </children>
+            <Label layoutX="114" layoutY="26" text="Rusty Messenger!"></Label>
 </AnchorPane>
