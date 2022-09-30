@@ -20,9 +20,9 @@
                 <Button fx:id="button_send" layoutX="404" layoutY="228" text="Send" />
                 <TextField fx:id="tf_message" layoutX="34.0" layoutY="228.0" prefHeight="26" prefWidth="361" />
                 <ScrollPane fx:id="sp_main" fitToWidth="true" layoutX="30" layoutY="70" prefHeight="256" prefWidth="418">
-                <content>
-
-                </content>
+                    <content>
+                        <VBox fx:id="vbox_messages" prefHeight="248" prefWidth="412"/>
+                    </content>
                 </ScrollPane>
             </children>
 </AnchorPane>
