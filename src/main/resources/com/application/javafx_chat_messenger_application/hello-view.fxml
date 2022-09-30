@@ -15,15 +15,21 @@
 </VBox>
 -->
 
-<AnchorPane fx:id="ap_main" prefHeight="272.0" prefWidth="467.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.application.javafx_chat_messenger_application.HelloController">
+<?import javafx.scene.text.Font?>
+<AnchorPane fx:id="ap_main" prefHeight="272.0" prefWidth="467.0" xmlns="http://javafx.com/javafx/17.0.2-ea"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.application.javafx_chat_messenger_application.HelloController">
             <children>
-                <Button fx:id="button_send" layoutX="404" layoutY="228" text="Send" />
-                <TextField fx:id="tf_message" layoutX="34.0" layoutY="228.0" prefHeight="26" prefWidth="361" />
+                <Button fx:id="button_send" layoutX="404" layoutY="340" text="Send" />
+                <TextField fx:id="tf_message" layoutX="34.0" layoutY="340" prefHeight="26" prefWidth="361" />
                 <ScrollPane fx:id="sp_main" fitToWidth="true" layoutX="30" layoutY="70" prefHeight="256" prefWidth="418">
                     <content>
                         <VBox fx:id="vbox_messages" prefHeight="248" prefWidth="412"/>
                     </content>
                 </ScrollPane>
             </children>
-            <Label layoutX="114" layoutY="26" text="Rusty Messenger!"></Label>
+            <Label layoutX="114" layoutY="26" text="Rusty Messenger!">
+                <font>
+                    <Font name="Arial Rounded MT Bold" size="23"></Font>
+                </font>
+            </Label>
 </AnchorPane>
