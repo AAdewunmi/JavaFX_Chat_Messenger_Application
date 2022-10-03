@@ -7,6 +7,7 @@ import javafx.scene.control.ScrollPane;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.VBox;
 
+import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -25,6 +26,11 @@ public class HelloController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-
+            try{
+                server = new Server(new ServerSocket(1234));
+            }catch(IOException e){
+                e.printStackTrace();
+                System.out.println("Error creating server ... ");
+            }
     }
 }
