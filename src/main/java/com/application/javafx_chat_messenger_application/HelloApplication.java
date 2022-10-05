@@ -1,4 +1,7 @@
 package com.application.javafx_chat_messenger_application;
+/**
+ * Main Class
+ */
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
