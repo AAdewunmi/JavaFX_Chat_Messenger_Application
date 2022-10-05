@@ -1,5 +1,7 @@
 package com.application.javafx_chat_messenger_application;
 
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
@@ -32,5 +34,12 @@ public class HelloController implements Initializable {
                 e.printStackTrace();
                 System.out.println("Error creating server ... ");
             }
+            vBox_messages.heightProperty().addListener(new ChangeListener<Number>() {
+                @Override
+                public void changed(ObservableValue<? extends Number> observable, Number oldValue, Number newValue) {
+                    sp_main.setVvalue((Double) newValue);
+                }
+            });
     }
+
 }
