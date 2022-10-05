@@ -40,6 +40,8 @@ public class HelloController implements Initializable {
                     sp_main.setVvalue((Double) newValue);
                 }
             });
+
+            server.receiveMessageFromClient(vBox_messages);
     }
 
 }
