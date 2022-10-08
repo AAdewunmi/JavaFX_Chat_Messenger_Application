@@ -24,6 +24,19 @@ public class Server {
         }catch(IOException e){
             System.out.println("Error creating Server!");
             e.printStackTrace();
+            closeEverything(socket, bufferedReader, bufferedWriter);
+        }
+    }
+
+    public void sendMessageToClient(String messageToClient){
+        try{
+            bufferedWriter.write(messageToClient);
+            bufferedWriter.newLine();
+            bufferedWriter.flush();
+        }catch(IOException e){
+            e.printStackTrace();
+            System.out.println("Error sending message to the Client!");
+            closeEverything(socket, bufferedReader, bufferedWriter);
         }
     }
 
