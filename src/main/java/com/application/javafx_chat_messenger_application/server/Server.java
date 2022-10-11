@@ -1,4 +1,4 @@
-package com.application.javafx_chat_messenger_application;
+package com.application.javafx_chat_messenger_application.server;
 
 import javafx.scene.layout.VBox;
 
@@ -49,7 +49,7 @@ public class Server {
                 while(socket.isConnected()){
                     try{
                         String messageFromClient = bufferedReader.readLine();
-                        HelloController.addLabel(messageFromClient, vBox);
+                        ServerController.addLabel(messageFromClient, vBox);
                     }catch (IOException e){
                         e.printStackTrace();
                         System.out.println("Error receiving message from the Client!");

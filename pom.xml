@@ -61,7 +61,7 @@
                         <id>default-cli</id>
                         <configuration>
                             <mainClass>
-                                com.application.javafx_chat_messenger_application/com.application.javafx_chat_messenger_application.HelloApplication
+                                com.application.javafx_chat_messenger_application/com.application.javafx_chat_messenger_application.server.ServerApplication
                             </mainClass>
                             <launcher>app</launcher>
                             <jlinkZipName>app</jlinkZipName>

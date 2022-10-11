@@ -3,6 +3,8 @@ module com.application.javafx_chat_messenger_application {
     requires javafx.fxml;
 
 
-    opens com.application.javafx_chat_messenger_application to javafx.fxml;
-    exports com.application.javafx_chat_messenger_application;
+    exports com.application.javafx_chat_messenger_application.client;
+    opens com.application.javafx_chat_messenger_application.client to javafx.fxml;
+    exports com.application.javafx_chat_messenger_application.server;
+    opens com.application.javafx_chat_messenger_application.server to javafx.fxml;
 }

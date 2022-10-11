@@ -5,7 +5,7 @@
 
 <?import javafx.scene.text.Font?>
 <AnchorPane fx:id="ap_main" prefHeight="272.0" prefWidth="467.0" xmlns="http://javafx.com/javafx/17.0.2-ea"
-            xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.application.javafx_chat_messenger_application.ClientController">
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.application.javafx_chat_messenger_application.client.ClientController">
     <children>
         <Button fx:id="button_send" layoutX="404" layoutY="340" text="Send" />
         <TextField fx:id="tf_message" layoutX="34.0" layoutY="340" prefHeight="26" prefWidth="361" />

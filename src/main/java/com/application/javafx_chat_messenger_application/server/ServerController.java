@@ -1,4 +1,4 @@
-package com.application.javafx_chat_messenger_application;
+package com.application.javafx_chat_messenger_application.server;
 /**
  * Server Controller Class
  */
@@ -26,7 +26,7 @@ import java.net.ServerSocket;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class HelloController implements Initializable {
+public class ServerController implements Initializable {
     @FXML
     private Button button_send;
     @FXML
