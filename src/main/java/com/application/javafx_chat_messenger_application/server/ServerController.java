@@ -39,12 +39,13 @@ public class ServerController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-            try{
-                server = new Server(new ServerSocket(1234));
-            }catch(IOException e){
-                e.printStackTrace();
-                System.out.println("Error creating Server ... ");
-            }
+        try{
+            server = new Server(new ServerSocket(1234));
+            System.out.println("Connected to Client!");
+        }catch(IOException e){
+            e.printStackTrace();
+            System.out.println("Error creating Server ... ");
+        }
         vBoxMessages.heightProperty().addListener(new ChangeListener<Number>() {
             @Override
             public void changed(ObservableValue<? extends Number> observable, Number oldValue, Number newValue) {

@@ -37,12 +37,12 @@ public class ClientController implements Initializable {
     private Client client;
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-
         try{
             client = new Client(new Socket("localhost", 1234));
             System.out.println("Connected to Server");
         }catch(IOException e){
             e.printStackTrace();
+            System.out.println("Error creating Client ... ");
         }
 
         vbox_messages.heightProperty().addListener(new ChangeListener<Number>() {
