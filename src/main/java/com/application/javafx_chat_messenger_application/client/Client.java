@@ -17,7 +17,23 @@ public class Client {
         }catch(IOException e){
             System.out.println("Error creating Client!");
             e.printStackTrace();
-            closeEveryThing();
+            closeEverything(socket, bufferedReader, bufferedWriter);
+        }
+    }
+
+    private void closeEverything(Socket socket, BufferedReader bufferedReader, BufferedWriter bufferedWriter){
+        try{
+            if (bufferedReader != null) {
+                bufferedReader.close();
+            }
+            if (bufferedWriter != null) {
+                bufferedWriter.close();
+            }
+            if (socket != null) {
+                socket.close();
+            }
+        }catch(IOException e){
+            e.printStackTrace();
         }
     }
 
