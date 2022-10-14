@@ -1,5 +1,7 @@
 package com.application.javafx_chat_messenger_application.client;
 
+import javafx.scene.layout.VBox;
+
 import java.io.*;
 import java.net.Socket;
 
@@ -49,5 +51,24 @@ public class Client {
             closeEverything(socket, bufferedReader, bufferedWriter);
         }
     }
-    
+
+    public void receiveMessageFromServer(VBox vbox_messages) {
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                while(socket.isConnected()){
+                    try{
+                        String messageFromServer = bufferedReader.readLine();
+                        ClientController.addLabel(messageFromServer, vbox_messages);
+                    }catch (IOException e){
+                        e.printStackTrace();
+                        System.out.println("Error receiving message from the Server!");
+                        closeEverything(socket, bufferedReader, bufferedWriter);
+                        break;
+                    }
+                }
+            }
+        }).start();
+    }
+
 }
