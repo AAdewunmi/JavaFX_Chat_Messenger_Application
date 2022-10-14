@@ -44,7 +44,7 @@ public class ServerController implements Initializable {
                 server = new Server(new ServerSocket(1234));
             }catch(IOException e){
                 e.printStackTrace();
-                System.out.println("Error creating server ... ");
+                System.out.println("Error creating Server ... ");
             }
             vBox_messages.heightProperty().addListener(new ChangeListener<Number>() {
                 @Override
