@@ -2,6 +2,7 @@ package com.application.javafx_chat_messenger_application.server;
 /**
  * Server Controller Class
  */
+
 import javafx.application.Platform;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
@@ -31,7 +32,7 @@ public class ServerController implements Initializable {
     @FXML
     private TextField tf_message;
     @FXML
-    private VBox vBox_messages;
+    VBox vBoxMessages;
     @FXML
     private ScrollPane sp_main;
     private Server server;
@@ -44,14 +45,14 @@ public class ServerController implements Initializable {
                 e.printStackTrace();
                 System.out.println("Error creating Server ... ");
             }
-            vBox_messages.heightProperty().addListener(new ChangeListener<Number>() {
-                @Override
-                public void changed(ObservableValue<? extends Number> observable, Number oldValue, Number newValue) {
-                    sp_main.setVvalue((Double) newValue);
-                }
-            });
+        vBoxMessages.heightProperty().addListener(new ChangeListener<Number>() {
+            @Override
+            public void changed(ObservableValue<? extends Number> observable, Number oldValue, Number newValue) {
+                sp_main.setVvalue((Double) newValue);
+            }
+        });
 
-            server.receiveMessageFromClient(vBox_messages);
+            server.receiveMessageFromClient(vBoxMessages);
 
             button_send.setOnAction(new EventHandler<ActionEvent>() {
                 @Override
@@ -66,15 +67,15 @@ public class ServerController implements Initializable {
                         TextFlow textFlow = new TextFlow(text);
 
                         textFlow.setStyle(
-                                "-fx-color: rgb(239, 242, 255)" +
-                                        "-fx-background-color: rgb(15, 125, 242)" +
-                                        "-fx-background-radius: 20px");
+                                "-fx-color: rgb(239, 242, 255);" +
+                                        "-fx-background-color: rgb(15, 125, 242);" +
+                                        "-fx-background-radius: 20px;");
 
                         textFlow.setPadding(new Insets(5, 10, 5, 10));
                         text.setFill(Color.color(0.934, 0.925, 0.996));
 
                         hBox.getChildren().add(textFlow);
-                        vBox_messages.getChildren().add(hBox);
+                        vBoxMessages.getChildren().add(hBox);
 
                         server.sendMessageToClient(messageToSend);
                         tf_message.clear();
@@ -92,8 +93,8 @@ public class ServerController implements Initializable {
         TextFlow textFlow = new TextFlow(text);
 
         textFlow.setStyle(
-                        "-fx-background-color: rgb(233, 233, 235)" +
-                        "-fx-background-radius: 20px");
+                        "-fx-background-color: rgb(233, 233, 235);" +
+                        "-fx-background-radius: 20px;");
 
         textFlow.setPadding(new Insets(5, 10, 5, 10));
         hBox.getChildren().add(textFlow);

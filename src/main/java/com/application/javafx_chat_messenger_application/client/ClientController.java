@@ -30,7 +30,7 @@ public class ClientController implements Initializable {
     @FXML
     private TextField tf_message;
     @FXML
-    private VBox vbox_messages;
+    VBox vbox_messages;
     @FXML
     private ScrollPane sp_main;
 
@@ -66,9 +66,9 @@ public class ClientController implements Initializable {
                     Text text = new Text(messageToSend);
                     TextFlow textFlow = new TextFlow(text);
                     textFlow.setStyle(
-                            "-fx-color: rgb(239, 242, 255)" +
-                                    "-fx-background-color: rgb(15, 125, 242)" +
-                                    "-fx-background-radius: 20px");
+                            "-fx-color: rgb(239, 242, 255);" +
+                                    "-fx-background-color: rgb(15, 125, 242);" +
+                                    "-fx-background-radius: 20px;");
 
                     textFlow.setPadding(new Insets(5, 10, 5, 10));
                     text.setFill(Color.color(0.934, 0.925, 0.996));
@@ -92,8 +92,8 @@ public class ClientController implements Initializable {
         TextFlow textFlow = new TextFlow(text);
 
         textFlow.setStyle(
-                "-fx-background-color: rgb(233, 233, 235)" +
-                        "-fx-background-radius: 20px");
+                "-fx-background-color: rgb(233, 233, 235);" +
+                        "-fx-background-radius: 20px;");
 
         textFlow.setPadding(new Insets(5, 10, 5, 10));
         hBox.getChildren().add(textFlow);
