@@ -1,5 +1,6 @@
 package com.application.javafx_chat_messenger_application.client;
 
+import javafx.application.Platform;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
@@ -80,6 +81,28 @@ public class ClientController implements Initializable {
                 }
             }
         });
+    }
 
+    public static void addLabel(String messageFromServer, VBox vBox){
+        HBox hBox = new HBox();
+        hBox.setAlignment(Pos.CENTER_LEFT);
+        hBox.setPadding(new Insets(5, 5, 5, 10));
+
+        Text text = new Text(messageFromServer);
+        TextFlow textFlow = new TextFlow(text);
+
+        textFlow.setStyle(
+                "-fx-background-color: rgb(233, 233, 235)" +
+                        "-fx-background-radius: 20px");
+
+        textFlow.setPadding(new Insets(5, 10, 5, 10));
+        hBox.getChildren().add(textFlow);
+
+        Platform.runLater(new Runnable() {
+            @Override
+            public void run() {
+                vBox.getChildren().add(hBox);
+            }
+        });
     }
 }
