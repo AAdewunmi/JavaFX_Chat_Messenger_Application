@@ -1,17 +1,13 @@
 package com.application.javafx_chat_messenger_application.server;
-
+/**
+ * Server Class
+ */
 import javafx.scene.layout.VBox;
-
 import java.io.*;
 import java.net.ServerSocket;
 import java.net.Socket;
 
-/**
- * Server Class
- */
-
 public class Server {
-
     private ServerSocket serverSocket;
     private Socket socket;
     private BufferedReader bufferedReader;

@@ -38,4 +38,16 @@ public class Client {
     }
 
 
+    public void sendMessageToServer(String messageToServer) {
+        try{
+            bufferedWriter.write(messageToServer);
+            bufferedWriter.newLine();
+            bufferedWriter.flush();
+        }catch(IOException e){
+            e.printStackTrace();
+            System.out.println("Error sending message to the Server!");
+            closeEverything(socket, bufferedReader, bufferedWriter);
+        }
+    }
+    
 }

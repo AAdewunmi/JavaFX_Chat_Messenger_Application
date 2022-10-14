@@ -2,7 +2,6 @@ package com.application.javafx_chat_messenger_application.server;
 /**
  * Server Controller Class
  */
-
 import javafx.application.Platform;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
@@ -35,7 +34,6 @@ public class ServerController implements Initializable {
     private VBox vBox_messages;
     @FXML
     private ScrollPane sp_main;
-
     private Server server;
 
     @Override
