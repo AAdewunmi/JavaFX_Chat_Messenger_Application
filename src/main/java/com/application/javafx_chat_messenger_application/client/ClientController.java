@@ -52,7 +52,7 @@ public class ClientController implements Initializable {
             }
         });
 
-        client.receiveMessageFromServer(vbox_messages);
+        // client.receiveMessageFromServer(vbox_messages);
 
         button_send.setOnAction(new EventHandler<ActionEvent>() {
             @Override
@@ -76,7 +76,7 @@ public class ClientController implements Initializable {
                     hBox.getChildren().add(textFlow);
                     vbox_messages.getChildren().add(hBox);
 
-                    client.sendMessageToServer(messageToSend);
+                    // client.sendMessageToServer(messageToSend);
                     tf_message.clear();
                 }
             }
