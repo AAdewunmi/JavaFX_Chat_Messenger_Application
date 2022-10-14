@@ -1,29 +1,46 @@
 # Project Title: JavaFX Chat Messenger Application
 
 
-## What is the project?
+## 1. Project Description:
 
 This is a GUI based TCP/IP client-server messenger application using Java sockets and JavaFX. 
 
-## Tech Stack
+## 2. Tech Stack:
 
 - Java 11
 - JavaFX
 
-## What is the MVP?
+## 3. Installing:
 
-The minimal viable product is a client-server application that runs the client GUI and server GUI on screen and they can send messages between each other.
+i. Clone the git repo
 
-## What are the sprinkles (Nice to haves)?
+```
+https://github.com/AAdewunmi/JavaFX_Chat_Messenger_Application.git
+```
 
-The sprinkles for this project are styling the GUI and extending the application to handle one than one client.
+ii. Open project folder
 
+iii. Explore
 
-## When will the project be complete?
+iv. Open ServerApplication.java and run
 
-The project will be complete once all the MVP features have been implemented and the application has been styled.
+iv. Open ClientApplication.java and run
 
-## Adapted from:
+Enjoy the Chat Messenger! 
+
+😎
+
+## 4. Contributing / Issues:
+
+Pull requests are welcome. 
+
+For major changes, please open an issue first to discuss what you would like to change.
+
+This is code I wrote, watching WittCode's Youtube Tutorial. It has some bugs which need fixing. 
+
+You are welcome to have a go, I have listed them in the Issues tab.
+
+## 5. Adapted from:
 
 Created By: WittCode
 
